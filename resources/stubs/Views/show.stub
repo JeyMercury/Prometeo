@@ -1,0 +1,37 @@
+@extends('Layouts.layout')
+
+@section('title', __('general.ver', ['object' => __('general.{{modelNameSingularLowerCase}}')]) . ' | ' . config('app.name'))
+
+@section('content')
+    <div class="grid-x">
+        <div class="small-12">
+            {!! Html::link(
+                route('{{modelNamePluralLowerCase}}.edit', ${{modelNameSingularLowerCase}}->id),
+                __('general.editar', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                [
+                    'escape' => false,
+                    'title' => __('general.editar', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                    'class' => 'button',
+                ]
+            ) !!}
+        </div>
+        <div class="small-12">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">{!! __('general.ver', ['object' => __('general.{{modelNameSingularLowerCase}}')]) !!}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{-- <tr>
+                        <th>field</th>
+                        <td>{{ ${{modelNameSingularLowerCase}}->field }}</td>
+                    </tr> --}}
+                </tbody>
+            </table>
+        </div>
+        <div class="botones">
+            {!! Html::link(route('{{modelNamePluralLowerCase}}.index'), __('general.volver'), ['class' => 'button']) !!}
+        </div>
+    </div>
+@endsection

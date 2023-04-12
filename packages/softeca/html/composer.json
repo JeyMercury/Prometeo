@@ -1,0 +1,33 @@
+{
+  "name": "softeca/html",
+  "description": "HTML and Form Builders for the Laravel Framework",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jose Ortega",
+      "email": "jose.ortega@softeca.es"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.4",
+    "illuminate/http": "5.4.*",
+    "illuminate/routing": "5.4.*",
+    "illuminate/session": "5.4.*",
+    "illuminate/support": "5.4.*",
+    "illuminate/view": "5.4.*",
+    "laravelcollective/html": "^5.4.0"
+  },
+  "require-dev": {
+    "illuminate/database": "5.4.*",
+    "mockery/mockery": "~0.9.4",
+    "phpunit/phpunit": "~5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Softeca\\Html\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{modelName}} extends Model
+{
+    /**
+     * Table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = '{{modelNamePluralLowerCase}}';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [];
+
+    /**
+     * The attributes that should be casted to other types
+     *
+     * @var array
+     */
+    protected $casts = [];
+
+    /**
+     * The accessors that will be always present in a model instance
+     *
+     * @var array
+     */
+    protected $appends = [];
+
+    /**
+     * Validation rules for the attributes
+     */
+    public function rules()
+    {
+        return [];
+    }
+
+    /**
+     * Validation messages
+     */
+    public static function messages()
+    {
+        return [];
+    }
+
+    /*
+     * Conditions
+     */
+    public static function conditions(&$query, $datos)
+    {
+        if (isset($datos['filtro'])) {
+            self::_condicionFiltro($query, $datos['filtro']);
+        }
+    }
+
+    public static function _condicionFiltro(&$query, $filtro)
+    {
+        // $query->where('nombre', 'like', '%' . $filtro . '%');
+    }
+
+    /**
+     * Model methods
+     */
+    public static function buscar($params)
+    {
+        $query = self::query();
+
+        self::conditions($query, $params);
+
+        if (filled($params['column']) && filled($params['order'])) {
+            $query->orderBy($params['column'], $params['order']);
+        }
+
+        return $query;
+    }
+
+    public function guardar($data)
+    {
+        // $this->field = $data['field'];
+
+        return $this->save();
+    }
+}

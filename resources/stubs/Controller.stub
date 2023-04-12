@@ -1,0 +1,93 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\{{modelName}};
+use Illuminate\Http\Request;
+use App\Http\Resources\{{modelName}}Resource;
+use App\Http\Requests\{{modelName}}\CreateFormRequest;
+use App\Http\Requests\{{modelName}}\UpdateFormRequest;
+
+class {{modelName}}Controller extends Controller
+{
+    /**
+     * Methods excluded from authentication
+     */
+    protected $except = [];
+
+    public function index(Request $request)
+    {
+        return view('{{modelNamePlural}}.index', [
+            'buscador' => $request->getQueryString(),
+        ]);
+    }
+
+    public function getDataTable(Request $request)
+    {
+        ${{modelNamePluralLowerCase}} = {{modelName}}::buscar($request)
+            ->paginate(constants('paginacion.NORMAL'));
+        return {{modelName}}Resource::collection(${{modelNamePluralLowerCase}});
+    }
+
+    public function create()
+    {
+        return view('{{modelNamePlural}}.create');
+    }
+
+    public function store(CreateFormRequest $request)
+    {
+        ${{modelNameSingularLowerCase}} = new {{modelName}}();
+        DB::beginTransaction();
+        if (${{modelNameSingularLowerCase}}->guardar($request->all())) {
+            DB::commit();
+            return redirect()->route('{{modelNamePluralLowerCase}}.index')->with('success', __('general.constants_text.SUCCESS'));
+        }
+
+        return back()->withInput()->with('error', __('general.constants_text.ERROR'));
+    }
+
+    public function show($id)
+    {
+        return view('{{modelNamePlural}}.show', [
+            '{{modelNameSingularLowerCase}}' => {{modelName}}::findOrFail($id)
+        ]);
+    }
+
+    public function edit($id)
+    {
+        return view('{{modelNamePlural}}.edit', [
+            '{{modelNameSingularLowerCase}}' => {{modelName}}::findOrFail($id)
+        ]);
+    }
+
+    public function update(UpdateFormRequest $request, $id)
+    {
+        DB::beginTransaction();
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findorfail($id);
+        if (${{modelNameSingularLowerCase}}->guardar($request->all())) {
+            DB::commit();
+            return redirect()->route('{{modelNamePluralLowerCase}}.index')->with('success', __('general.constants_text.SUCCESS'));
+        }
+
+        return back()->withInput()->with('error', __('general.constants_text.ERROR'));
+    }
+
+    public function destroy($id)
+    {
+        DB::beginTransaction();
+        ${{modelNameSingularLowerCase}} = {{modelName}}::findOrFail($id);
+        if (${{modelNameSingularLowerCase}}->delete()) {
+            DB::commit();
+            $salida = [
+                'resultado' => true,
+                'text' => __('general.constants_text.ELIMINAR.SUCCESS'),
+            ];
+        } else {
+            $salida = [
+                'resultado' => false,
+                'text' => __('general.constants_text.ELIMINAR.ERROR'),
+            ];
+        }
+        return json_encode($salida);
+    }
+}

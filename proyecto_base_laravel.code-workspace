@@ -1,0 +1,92 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.autoSave": "onFocusChange",
+        "php.validate.enable": true,
+        "php.validate.run": "onSave",
+        "better-comments.tags": [
+            {
+                "tag": "!",
+                "color": "#FF2D00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "?",
+                "color": "#3498DB",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "//",
+                "color": "#474747",
+                "strikethrough": true,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "todo",
+                "color": "#FF8C00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "fixme",
+                "color": "#F06292",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "*",
+                "color": "#98C379",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            }
+        ],
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active",
+        "editor.cursorSmoothCaretAnimation": "on",
+        "editor.smoothScrolling": true,
+        "workbench.list.smoothScrolling": true,
+        "terminal.integrated.smoothScrolling": true,
+        "task.allowAutomaticTasks": "on",
+    },
+    "extensions": {
+        "recommendations": [
+            "GitHub.copilot",
+            "formulahendry.auto-rename-tag",
+            "aaron-bond.better-comments",
+            "eamodio.gitlens",
+            "onecentlin.laravel-extension-pack",
+            "bmewburn.vscode-intelephense-client",
+            "MehediDracula.php-namespace-resolver",
+            "colch.quick-open-prefill-selection",
+            "syler.sass-indented",
+            "SonarSource.sonarlint-vscode",
+            "shardulm94.trailing-spaces",
+            "Vue.volar",
+        ],
+        "unwantedRecommendations": []
+    }
+}

@@ -1,0 +1,37 @@
+@extends('Layouts.layout')
+
+@section('title', __('general.{{modelNamePluralLowerCase}}') . ' | ' . config('app.name'))
+
+@section('content')
+    <div class="grid-x">
+        <div class="small-12">
+            {{ Html::link(
+                route('{{modelNamePluralLowerCase}}.create'),
+                __('general.nuevo', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                [
+                    'class' => 'button right',
+                ]
+            ) }}
+        </div>
+        <div class="small-12">
+            <data-table
+                fetch-url="{{ route('{{modelNamePluralLowerCase}}.datatable') }}"
+                :columns="[
+                    // {
+                    //     key: 'field',
+                    //     text: 'field',
+                    //     order_column: 'field'
+                    // },
+                    {
+                        key: 'acciones',
+                        text: '{{ __('general.acciones') }}',
+                        order_column: null
+                    }
+                ]"
+                :buscador="true"
+                buscador_label="{{ __('general.textos.buscador') }}"
+                request={{ $buscador }}>
+            </data-table>
+        </div>
+    </div>
+@endsection

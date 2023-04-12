@@ -1,0 +1,22 @@
+<?php
+return array(
+    'enero' => 'Enero',
+    'febrero' => 'Febrero',
+    'marzo' => 'Marzo',
+    'abril' => 'Abril',
+    'mayo' => 'Mayo',
+    'junio' => 'Junio',
+    'julio' => 'Julio',
+    'agosto' => 'Agosto',
+    'septiembre' => 'Septiembre',
+    'octubre' => 'Octubre',
+    'noviembre' => 'Noviembre',
+    'diciembre' => 'Diciembre',
+    'lunes' => "Lunes",
+    'martes' => "Martes",
+    'miercoles' => "Miercoles",
+    'jueves' => "Jueves",
+    'viernes' => "Viernes",
+    'sabado' => "Sabado",
+    'domingo' => "Domingo",
+);

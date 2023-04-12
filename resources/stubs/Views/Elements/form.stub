@@ -1,0 +1,8 @@
+<div class="grid-x">
+    <div class="small-12">
+    </div>
+    <div class="small-12 botones">
+        {!! Html::link(route('{{modelNamePluralLowerCase}}.index'), __('general.cancelar'), ['class' => 'secondary button']) !!}
+        {!! Form::submit(__('general.guardar'), ['class' => 'button']) !!}
+    </div>
+</div>

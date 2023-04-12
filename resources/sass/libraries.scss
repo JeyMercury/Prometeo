@@ -1,0 +1,12 @@
+// Settings
+@import "settings";
+
+// Foundation
+@import "~foundation-sites/scss/foundation";
+
+// Include Everything (True) for the Flex Grid :);
+@include foundation-everything($prototype: true);
+
+@import "~ionicons/dist/css/ionicons.min.css";
+
+@import "~sweetalert2/dist/sweetalert2.min.css";

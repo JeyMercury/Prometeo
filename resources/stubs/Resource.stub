@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class {{modelName}}Resource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'acciones' => $this->getActions($request)
+        ];
+    }
+
+    protected function getActions($request)
+    {
+        return array(
+            array(
+                'ruta' => route('{{modelNamePluralLowerCase}}.show', $this->id),
+                'icono' => 'icon ion-md-eye',
+                'title' => __('general.ver', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                'type' => 'link'
+            ),
+            array(
+                'ruta' => route('{{modelNamePluralLowerCase}}.edit', $this->id),
+                'icono' => 'icon ion-md-create',
+                'title' => __('general.editar', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                'type' => 'link'
+            ),
+            array(
+                'url_api' => route('{{modelNamePluralLowerCase}}.destroy', $this->id),
+                'elemento_id' => (string)$this->id,
+                'title' => __('general.eliminar', ['object' => __('general.{{modelNameSingularLowerCase}}')]),
+                'subtitulo' => __('general.constants_text.SWAL.BORRAR.TITULO'),
+                'boton_si' => __('general.aceptar'),
+                'boton_no' => __('general.cancelar'),
+                'reload' => true,
+                'type' => 'sweet-alert'
+            )
+        );
+    }
+}
