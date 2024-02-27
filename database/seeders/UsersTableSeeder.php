@@ -16,8 +16,8 @@ class UsersTableSeeder extends Seeder
         User::create([
             'username' => 'administrador',
             'nombre' => 'Administrador',
-            'apellidos' => 'Softeca',
-            'email' => 'jose.ortega@softeca.es',
+            'apellidos' => 'Company',
+            'email' => 'jose.ortega@company.es',
             'password' => bcrypt('administrador'),
             'activo' => 1,
             'fecha_nacimiento' => '2000-01-01'
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'empleado',
             'nombre' => 'Empleado',
             'apellidos' => '',
-            'email' => 'empleado@softeca.es',
+            'email' => 'empleado@company.es',
             'password' => bcrypt('empleado'),
             'activo' => 1,
         ]);
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'empleadovip',
             'nombre' => 'Empleado VIP',
             'apellidos' => '',
-            'email' => 'empleadovip@softeca.es',
+            'email' => 'empleadovip@company.es',
             'password' => bcrypt('empleadovip'),
             'activo' => 1,
         ]);

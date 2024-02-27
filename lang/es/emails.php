@@ -1,12 +1,12 @@
 <?php
 return array(
     'bienvenida' => [
-        'subject' => 'Bienvenido a Softeca',
+        'subject' => 'Bienvenido a Company',
         'titulo' => 'Bienvenido/a :name',
-        'body' => 'En nombre de todo el equipo de Softeca te damos la bienvenida a nuestra empresa',
+        'body' => 'En nombre de todo el equipo de Company te damos la bienvenida a nuestra empresa',
     ],
     'restaurar_contraseña' => [
-        'subject' => 'Softeca | Restaurar Contraseña',
+        'subject' => 'Company | Restaurar Contraseña',
         'titulo' => '¡Hola!',
         'body' => [
             'Usted está recibiendo este correo electrónico porque hemos recibido una solicitud de restablecimiento de contraseña para su cuenta',
