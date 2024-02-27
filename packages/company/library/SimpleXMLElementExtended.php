@@ -1,6 +1,6 @@
 <?php
 
-namespace Softeca\Library;
+namespace Company\Library;
 
 class SimpleXMLElementExtended extends \SimpleXMLElement {
     /**

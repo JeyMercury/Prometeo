@@ -5,7 +5,7 @@
             <table style="font-family: arial; font-size: 11px; text-align: right; color: #7c7c7c;">
                 <tr>
                     <td style="border-bottom: solid 2px #0459a3; padding-bottom: 25px; width: 700px; text-align: left;">
-                        <h1> SOFTECA </h1>
+                        <h1> COMPANY </h1>
                     </td>
                 </tr>
             </table>

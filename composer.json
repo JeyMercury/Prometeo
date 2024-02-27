@@ -40,12 +40,12 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Softeca\\Html\\": "packages/softeca/html/src",
-            "Softeca\\Library\\": "packages/softeca/library",
+            "Company\\Html\\": "packages/company/html/src",
+            "Company\\Library\\": "packages/company/library",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
-        "files": ["packages/softeca/html/src/helpers.php"]
+        "files": ["packages/company/html/src/helpers.php"]
     },
     "autoload-dev": {
         "psr-4": {

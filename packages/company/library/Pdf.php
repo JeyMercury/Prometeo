@@ -1,6 +1,6 @@
 <?php
 
-namespace Softeca\Library;
+namespace Company\Library;
 
 use Mpdf\Mpdf as Mpdf;
 

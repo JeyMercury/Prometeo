@@ -196,7 +196,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Softeca\Html\HtmlServiceProvider::class,
+        Company\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -212,14 +212,14 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'Form' => Softeca\Html\FormFacade::class,
+        'Form' => Company\Html\FormFacade::class,
         'Honeypot' => Msurguy\Honeypot\HoneypotFacade::class,
-        'Html' => Softeca\Html\HtmlFacade::class,
-        'Ficheros' => Softeca\Library\Ficheros::class,
-        'SimpleXMLElementExtended' => Softeca\Library\SimpleXMLElementExtended::class,
-        'Pdf' => Softeca\Library\Pdf::class,
+        'Html' => Company\Html\HtmlFacade::class,
+        'Ficheros' => Company\Library\Ficheros::class,
+        'SimpleXMLElementExtended' => Company\Library\SimpleXMLElementExtended::class,
+        'Pdf' => Company\Library\Pdf::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'Fechas' => Softeca\Library\Fechas::class,
+        'Fechas' => Company\Library\Fechas::class,
     ])->toArray(),
 
 ];
