@@ -16,4 +16,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-**/Zone.Identifier
+/Zone.Identifier
