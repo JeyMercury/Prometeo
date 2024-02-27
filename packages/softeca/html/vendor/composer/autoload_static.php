@@ -11,7 +11,7 @@ class ComposerStaticInit86466bc2d96945bf9dfc80b0232b44c3
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'S' =>
         array (
             'Softeca\\Html\\' => 12,
         ),

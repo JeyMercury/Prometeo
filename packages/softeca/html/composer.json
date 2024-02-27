@@ -1,11 +1,11 @@
 {
-  "name": "softeca/html",
+  "name": "company/html",
   "description": "HTML and Form Builders for the Laravel Framework",
   "license": "MIT",
   "authors": [
     {
       "name": "Jose Ortega",
-      "email": "jose.ortega@softeca.es"
+      "email": "jose.ortega@company.es"
     }
   ],
   "require": {
