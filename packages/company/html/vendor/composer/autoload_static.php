@@ -13,12 +13,12 @@ class ComposerStaticInit86466bc2d96945bf9dfc80b0232b44c3
     public static $prefixLengthsPsr4 = array (
         'S' =>
         array (
-            'Softeca\\Html\\' => 12,
+            'Company\\Html\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Softeca\\Html\\' =>
+        'Company\\Html\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

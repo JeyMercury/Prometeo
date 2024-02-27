@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use App\Models\User;
-use Softeca\Library\Fechas;
+use Company\Library\Fechas;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Softeca\\Html\\' => array($baseDir . '/src'),
+    'Company\\Html\\' => array($baseDir . '/src'),
 );

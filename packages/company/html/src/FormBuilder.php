@@ -1,6 +1,6 @@
 <?php
 
-namespace Softeca\Html;
+namespace Company\Html;
 
 use Collective\Html\HtmlBuilder;
 use Illuminate\Contracts\Routing\UrlGenerator;

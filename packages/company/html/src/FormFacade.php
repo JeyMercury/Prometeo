@@ -1,13 +1,13 @@
 <?php
 
-namespace Softeca\Html;
+namespace Company\Html;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Collective\Html\HtmlBuilder
+ * @see \Company\Html\FormBuilder
  */
-class HtmlFacade extends Facade
+class FormFacade extends Facade
 {
 
     /**
@@ -17,6 +17,6 @@ class HtmlFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'html';
+        return 'form';
     }
 }

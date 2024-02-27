@@ -1,6 +1,6 @@
 <?php
 
-namespace Softeca\Html;
+namespace Company\Html;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
