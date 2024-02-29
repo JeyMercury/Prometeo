@@ -45,12 +45,13 @@
             </div>
 
             <div class="button-plus-link">
-                <button type="submit" class="button">
-                    {{ __('general.login.login') }}
-                </button>
+                <div class="button-container">
+                    <button type="submit" class="button black-button">
+                        {{ __('general.login.login') }}
+                    </button>
+                </div>
 
-                <a href="{{ route('password.request') }}">
-                    &nbsp;
+                <a href="{{ route('password.request') }}" class="forgot-password-link float-right">
                     {{ __('general.login.has_olvidado_la_contraseña') }}
                 </a>
             </div>

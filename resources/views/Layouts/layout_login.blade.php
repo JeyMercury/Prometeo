@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }} {{ app()->version() }}</title>
+    <title class="title">{{ config('app.name') }} {{ app()->version() }}</title>
 
     <!-- Styles -->
     <link href="{{ asset_cache('css/libraries.css') }}" rel="stylesheet">

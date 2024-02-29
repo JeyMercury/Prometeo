@@ -719,12 +719,12 @@ h6, .h6 {
 }
 a {
   line-height: inherit;
-  color: #1779ba;
+  color: #fefefe;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:focus {
-  color: #1468a0;
+    text-decoration: underline;
 }
 a img {
   border: 0;
@@ -3068,8 +3068,8 @@ ul.no-bullet, ol.no-bullet {
   color: #fefefe;
 }
 .button:hover, .button:focus {
-  background-color: #14679e;
-  color: #fefefe;
+    background-color: #2c2c2c;
+    color: #fefefe;
 }
 .button.primary, .button.primary.disabled, .button.primary[disabled], .button.primary.disabled:hover, .button.primary[disabled]:hover, .button.primary.disabled:focus, .button.primary[disabled]:focus {
   background-color: #1779ba;
@@ -4755,7 +4755,7 @@ a.thumbnail image {
   padding: 0.7rem 1rem;
   font-weight: bold;
   line-height: 1;
-  color: inherit;
+  color: #fefefe;
 }
 
 .menu-centered > .menu {
@@ -5877,7 +5877,7 @@ html.is-reveal-open body {
 }
 .top-bar,
 .top-bar ul {
-  background-color: #e6e6e6;
+  background-color: #0a0a0a;
 }
 .top-bar input {
   max-width: 200px;
@@ -6953,4 +6953,55 @@ ol.list-upper-roman {
 .padding-vertical-3 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.form-container {
+    background-color: #808080;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-title {
+    font-weight: bold;
+    color: #fefefe;
+}
+
+label {
+    color: #fefefe;
+}
+
+input {
+    color: #fefefe;
+}
+
+.button {
+    color: #fefefe;
+}
+
+.black-button {
+    background-color: #0A0A0A;
+}
+
+.button-plus-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.button-container {
+    grid-column: 2;
+    text-align: center;
+}
+
+.forgot-password-link {
+    grid-column: 3;
+    text-align: right;
+    color: #fefefe;
 }
