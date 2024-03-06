@@ -22,6 +22,8 @@
 
         @include('Elements.sesion_mensajes')
 
+        @include('Layouts.Elements.sidebar')
+
         <div class="grid-container margin-top-1">
             @yield('content')
         </div>
