@@ -5,6 +5,9 @@ use App\Models\Email;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\PromptController;
+use App\Http\Controllers\ExtraInfoController;
+use App\Http\Controllers\AnalyticController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\PermissionController;
@@ -26,6 +29,28 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::group(['prefix' => 'prompts', 'as' => 'prompts.'], function () {
+    Route::get('/', [PromptController::class, 'index'])->name('index');
+    Route::get('create', [PromptController::class, 'create'])->name('create');
+    Route::post('store', [PromptController::class, 'store'])->name('store');
+    Route::get('edit/{id}', [PromptController::class, 'edit'])->name('edit');
+    Route::put('update/{id}', [PromptController::class, 'update'])->name('update');
+    // Route::delete('destroy/{id}', [PromptController::class, 'destroy'])->name('destroy');
+});
+
+Route::group(['prefix' => 'extra_info', 'as' => 'extra_info.'], function () {
+    Route::get('/', [ExtraInfoController::class, 'index'])->name('index');
+    Route::get('create', [ExtraInfoController::class, 'create'])->name('create');
+    Route::post('store', [ExtraInfoController::class, 'store'])->name('store');
+    Route::get('edit/{id}', [ExtraInfoController::class, 'edit'])->name('edit');
+    Route::put('update/{id}', [ExtraInfoController::class, 'update'])->name('update');
+    Route::delete('destroy/{id}', [ExtraInfoController::class, 'destroy'])->name('destroy');
+});
+
+Route::group(['prefix' => 'analytics', 'as' => 'analytics.'], function () {
+    Route::get('/', [AnalyticController::class, 'index'])->name('index');
+});
 
 Route::group(['prefix' => 'users', 'as' => 'users.', 'middleware' => 'permission:VER_USUARIOS'], function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
