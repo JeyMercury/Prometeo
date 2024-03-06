@@ -1,0 +1,42 @@
+version: "25.0.3"
+
+services:
+  server:
+    image: php:8.1.2-apache
+    restart: unless-stopped
+    ports:
+      - 81:80
+    networks:
+      - app-network
+    volumes:
+      - ./:/var/www/html
+      - ./apache/apache.conf:/etc/apache2/sites-available/000-default.conf
+
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: $DB_DATABASE
+      POSTGRES_USER: $DB_USERNAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
+    networks:
+      - app-network
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    restart: unless-stopped
+    networks:
+      - app-network
+    volumes:
+      - ./:/var/www/html
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
